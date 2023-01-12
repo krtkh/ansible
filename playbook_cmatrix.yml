@@ -1,0 +1,11 @@
+---
+- name         : Install Cmatrix
+  hosts        : all
+  gather_facts : false
+  become       : yes
+
+
+
+  tasks:
+  - name: Install Cmatrix
+    apt: name=cmatrix state=latest 
