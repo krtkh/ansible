@@ -1,0 +1,13 @@
+---
+- name: Install Nginx
+  gather_facts: false
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: Install Nginx
+    apt: name=nginx state=latest
+
+  - name: Set service
+    service: name=nginx state=started enabled=yes
