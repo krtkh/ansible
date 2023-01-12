@@ -1,0 +1,10 @@
+---
+- name: Collection of information
+  hosts: all
+  become: yes
+
+
+  tasks:
+  - name: Collect name server
+    debug:
+      var:  ansible_distribution
